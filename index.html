@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="./asset/styles/style.css">
+</head>
+<body>
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Hans McMurdy">
+      <title>Bootstrap 5 Offcanvas Template · Bootstrap</title>
+      <meta name="title" content="#JavaScriptFirst">
+      <meta name="description" content="Learn how to code with #JavaScriptFirst: https://github.com/HansUXdev/JavaScript-First">
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <!-- Favicons -->
+      <meta name="theme-color" content="#7952b3">
+    
+   </head>
+   <body class="bg-light">
+    <!-- NAV -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">Calculador de gastos</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+               <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                  <li class="nav-item active">
+                     <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">About</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- MAIN -->
+      <main class="container">
+        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+          <img class="mr-3" src="./asset/img/JavaScript-logo.png" alt="" width="48" height="48">
+          <div class="lh-1">
+            <h6 class="mb-0 text-white lh-1">#esteSitioFuncionaConJavascript</h6>
+            <small>Gran parte de la funcionalidad de este pequeño calculador de gastos mensuales, funciona con JavaScript. Este sitio, forma parte de un proyecto que consiste en armar distintas aplicaciones, o simuladores interactivos mientras voy adquiriendo experiencia con esta tenconología.
+            </small>
+          </div>
+        </div> <!-- CARTEL JS -->
+
+        <div class="col-md-4 mt-4">
+          <div
+            class="bg-purple p-3 text-white"
+          >
+            <h4 class="lh-3">Presupuesto</h4>
+            <div class="mb-3">
+  
+              <input
+                type="text"
+                class="form-control"
+                aria-describedby="helpId"
+                placeholder="Ingresa tu presupuesto mensual."
+              />
+            </div>
+
+            <input
+              id=""
+              class="btn btn-primary"
+              type="button"
+              value="Button"
+            />
+            
+            <hr />
+            <p class="mb-0">Alert Description</p>
+          </div>
+        </div> <!-- Presupuesto -->
+        
+
+
+
+      </main> <!-- FIN DE MAIN -->
+
+      
+
+      
+      <script type="text/javascript">
+         (function () {
+           'use strict'
+             document.querySelector('[data-toggle="offcanvas"]').addEventListener('click', function () {
+             document.querySelector('.offcanvas-collapse').classList.toggle('open')
+           })
+         })()
+      </script>
+   </body>
+</html>
+
+<!-- SCRIP B5 -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<!-- SCRIPT APP -->
+<script src="./source/app.js"></script>
+</body>
+</html>
