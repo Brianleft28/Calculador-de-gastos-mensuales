@@ -1,6 +1,6 @@
 # SimuladorInteractivo
 
-<h1>Calculá tus gastos mensuales con este simulador interactivo.</h1>
+<h3>Calculá tus gastos mensuales con este simulador interactivo.</h3>
 
 <h4>
     Javascript, Bootstrap. 
