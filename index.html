@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="./asset/styles/style.css">
-</head>
 <body>
-
-<!doctype html>
-<html lang="en">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="author" content="Hans McMurdy">
-      <title>Bootstrap 5 Offcanvas Template · Bootstrap</title>
+      <title>Calculador de gastos | Briansito</title>
       <meta name="title" content="#JavaScriptFirst">
       <meta name="description" content="Learn how to code with #JavaScriptFirst: https://github.com/HansUXdev/JavaScript-First">
       <!-- Bootstrap core CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <!-- CUSTOM CSS -->
+      <link rel="stylesheet" href="./asset/styles/style.css">
       <!-- Favicons -->
-      <meta name="theme-color" content="#7952b3">
-    
    </head>
    <body class="bg-light">
     <!-- NAV -->
@@ -47,6 +36,7 @@
             </div>
          </div>
       </nav>
+      
       <!-- MAIN -->
       <main class="container">
         <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
@@ -58,37 +48,43 @@
           </div>
         </div> <!-- CARTEL JS -->
 
-        <div class="col-md-4 mt-4">
-          <div
-            class="bg-purple p-3 text-white"
-          >
-            <h4 class="lh-3">Presupuesto</h4>
-            <div class="mb-3">
+<div class="container d-flex">
+  <div class="col-md-4 mt-4">
+    <div
+    class="bg-purple p-3 text-white"
+    >
+      <h4 class="lh-3 mb-3">Presupuesto</h4>
+      <div class="mb-3">
+        <input
+      type="text"
+      class="form-control"
+      aria-describedby="helpId"
+      placeholder="Ingresa tu presupuesto mensual."
+      />
+<!-- Ingresar el monto del presupuesto ingresado -->
+</div>
+<button
+type="button"
+class="btn btn-primary"
+>
+Enviar
+</button>
+<hr />
+<div class="presupuesto mb-1">
+<p class="mb-0 ">Presupuesto disponible:</p>
+</div>
+<div class="gasto mt-2">
+<p class="mb-0 ">Gasto Total:</p>
+</div> 
+</div> <!-- Presupuesto -->
+  </div>
+</div> <!-- Cierre div presupuesto y gasto -->
+
+
+      
   
-              <input
-                type="text"
-                class="form-control"
-                aria-describedby="helpId"
-                placeholder="Ingresa tu presupuesto mensual."
-              />
-            </div>
-
-            <input
-              id=""
-              class="btn btn-primary"
-              type="button"
-              value="Button"
-            />
-            
-            <hr />
-            <p class="mb-0">Alert Description</p>
-          </div>
-        </div> <!-- Presupuesto -->
-        
-
-
-
-      </main> <!-- FIN DE MAIN -->
+  
+  </main> <!-- FIN DE MAIN -->
 
       
 
