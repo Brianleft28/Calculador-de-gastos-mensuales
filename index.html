@@ -28,7 +28,7 @@
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
       <div class="container-fluid text-center">
-        <a class="navbar-brand text-center text-md-start" href="#">Calculador de gastos</a>
+        <a class="navbar-brand text-center text-md-start" href="#"> <span class="text-warning">Calculador </span>de gastos</a>
         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,8 +51,8 @@
     <!-- MAIN -->
     <main class="container-fluid">
       <div class="d-flex align-items-center col-md-12 p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-        <img class="mr-3" src="./asset/img/JavaScript-logo.png" alt="" width="48" height="48">
-        <div class="lh-1">
+        <img class="mr-3 img" src="./asset/img/JavaScript-logo.png" alt="" width="48" height="48">
+        <div class="lh-1 presupuesto">
           <h6 class="mb-0 text-white lh-1">#Javascript</h6>
           <small>Gran parte de la funcionalidad de este pequeño calculador de gastos mensuales, funciona con JavaScript.
             Este sitio, forma parte de un proyecto que consiste en armar distintas aplicaciones, o simuladores
@@ -63,20 +63,20 @@
 
       <div class="container-fluid d-inline d-md-flex justify-content-center contenedor">
         <!-- Inicio div presupuesto -->
-        <div class="bg-purple p-3 col-12 col-lg-6 col-md-6  mx-md-3  text-white shadow">
+        <div class="bg-purple p-3 col-12 col-lg-6 col-md-6  mx-md-3 rounded text-white shadow">
           <h4 class="lh-3 mb-3">Presupuesto</h4>
           <div class="mb-3">
-            <input type="text" class="form-control" aria-describedby="helpId"
+            <input type="number" id="presupuesto" class="form-control" aria-describedby="helpId"
               placeholder="Ingresa tu presupuesto mensual." />
             <!-- Ingresar el monto del presupuesto ingresado -->
           </div>
-          <button type="button" class="btn btn-primary">
+          <button type="button" id="btnPresupuesto" class="btn btn-primary">
             Ingresar el presupuesto
           </button>
         </div> <!-- Presupuesto -->
 
         <!-- Inicio div gastos -->
-        <div class="bg-purple p-3 my-3 my-md-0 col-12 col-lg-6 col-md-6  mx-md-3  text-white shadow">
+        <div class="bg-purple p-3 my-3 my-md-0 col-12 col-lg-6 col-md-6  mx-md-3  rounded text-white shadow">
           <h4 class="lh-3 mb-3">Gastos</h4>
           <div class="mb-3">
             <!-- INPUT GASTOS -->
@@ -84,16 +84,33 @@
             <input type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
             <hr>
             <label for="costoDeGasto" class="mb-2">Ingrese el costo del gasto</label>
-            <input type="text" class="form-control" clas="" aria-describedby="helpId" placeholder="Ingresa el monto del gasto"/>
+            <input type="number" class="form-control" clas="" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
             <!-- Ingresar datos del gasto-->
           </div>
           <button type="button" class="btn btn-primary">
             Ingresar el gasto
           </button>
         </div> <!-- Gastos -->
-
       </div> <!-- Cierre div presupuesto y gasto -->
+        
+      <!-- VISUALIZAR GASTOS -->
+      
+      <div class="container-fluid row justify-content-center">
+        <div class="d-flex align-items-center col-md-6 justify-content-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+          <h4 class="lh-3 mb-3">Gastos:</h4>
+          <hr>
+        </div>
+        <div class="listaGastos">
+        <ul id="gastos" style="display: none;">
+          <li>
+          </li>
+        </ul>
+        </div>
+      </div> 
+            
 
+        
+          
     </main> <!-- FIN DE MAIN -->
 
 
