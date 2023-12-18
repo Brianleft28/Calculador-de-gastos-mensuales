@@ -61,6 +61,15 @@
         </div>
       </div> <!-- CARTEL JS -->
 
+      <div class="container-fluid">
+        
+      </div>
+
+      <button class="btn btn-primary" id="btnPresu" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Ingresar presupuesto +
+      </button>
+      <div class="collapse" id="collapseExample">
+
       <div class="container-fluid d-inline d-md-flex justify-content-center contenedor">
         <!-- Inicio div presupuesto -->
         <div class="bg-purple p-3 col-12 col-lg-6 col-md-6  mx-md-3 rounded text-white shadow">
@@ -73,37 +82,50 @@
           <button type="button" id="btnPresupuesto" class="btn btn-primary">
             Ingresar el presupuesto
           </button>
-        </div> <!-- Presupuesto -->
-
-        <!-- Inicio div gastos -->
-        <div class="bg-purple p-3 my-3 my-md-0 col-12 col-lg-6 col-md-6  mx-md-3  rounded text-white shadow">
-          <h4 class="lh-3 mb-3">Gastos</h4>
-          <div class="mb-3">
-            <!-- INPUT GASTOS -->
-            <label for="nombreDeGasto" class="mb-2">Ingrese el nombre del gasto</label>
-            <input id="nombreDeGasto" type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
-            <hr>
-            <label for="costoDeGasto" class="mb-2">Ingrese el costo del gasto</label>
-            <input type="number" class="form-control" clas="" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
-            <!-- Ingresar datos del gasto-->
-          </div>
-          <button id="btnGasto" type="button" class="btn btn-primary">
-            Ingresar el gasto
+          <button type="button" id="btnCancelarPresu" class="btn btn-danger">
+            Cancelar
           </button>
-        </div> <!-- Gastos -->
-      </div> <!-- Cierre div presupuesto y gasto -->
+        </div> <!-- Presupuesto -->
+      </div>
+    </div>
+        <!-- Inicio div gastos -->
+        <button id="gastoInputBtn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            Ingresar un GASTO +
+        </button>
+        <div class="collapse" id="collapseExample2">
+          <div class="container-fluid d-inline  d-md-flex justify-content-center contenedor">
+            <div 
+            class="bg-purple p-3 my-3 my-md-3 col-12 col-lg-6 col-md-6  mx-md-3 rounded text-white shadow">
+             <h4 class="lh-3 mb-3">Gastos</h4>
+             <div class="mb-3">
+               <!-- INPUT GASTOS -->
+               <label for="nombreDeGasto" class="mb-2">Ingrese el nombre del gasto</label>
+               <input id="nombreDeGasto" type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
+               <hr>
+               <label for="costoDeGasto" class="mb-2">Ingrese el costo del gasto</label>
+               <input type="number" class="form-control" class="presupuesto" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
+               <!-- Ingresar datos del gasto-->
+             </div>
+             <button id="btnGasto" type="button" class="btn btn-primary">
+               Ingresar el gasto
+             </button>
+             <button id="btnCancelarGasto" type="button" class="btn btn-danger">
+              Cancelar
+            </div> <!-- Gastos -->
+          </div>   <!-- BTN REVEAL GASTOS -->
+        </div>
+         <!-- Cierre div presupuesto y gasto -->
+
+        
         
       <!-- VISUALIZAR GASTOS -->
       
-      <div class="container-fluid row justify-content-center">
-        <div class="d-flex align-items-center col-md-6 justify-content-center p-3 my-3 text-white bg-purple rounded shadow-sm">
+      <div class="container-fluid row justify-content-center col-12 col-lg-12 col-md-12 ">
+        <div class="d-flex align-items-center justify-content-center p-3 my-3 text-white col-12 col-lg-12 col-md-12 bg-purple rounded shadow-sm">
           <h4 class="lh-3 mb-3">Gastos:</h4>
-          <hr>
         </div>
-        <div class="listaGastos" style="display: none;">
-        <ul id="gastos" style="display: none;">
-          <li class="gastosLi">
-          </li>
+        <div class="listaGastos " style="display: none;">
+        <ul id="gastos">
         </ul>
         </div>
       </div> 
