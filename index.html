@@ -54,9 +54,9 @@
         <img class="mr-3 img" src="./asset/img/JavaScript-logo.png" alt="" width="48" height="48">
         <div class="lh-1 presupuesto">
           <h6 class="mb-0 text-white lh-1">#Javascript</h6>
-          <small>Gran parte de la funcionalidad de este pequeño calculador de gastos mensuales, funciona con JavaScript.
+          <small id="divPresu">Gran parte de la funcionalidad de este pequeño calculador de gastos mensuales, funciona con JavaScript.
             Este sitio, forma parte de un proyecto que consiste en armar distintas aplicaciones, o simuladores
-            interactivos mientras voy adquiriendo experiencia con esta tenconología.
+            interactivos.
           </small>
         </div>
       </div> <!-- CARTEL JS -->
@@ -103,7 +103,7 @@
                <input id="nombreDeGasto" type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
                <hr>
                <label for="costoDeGasto" class="mb-2">Ingrese el costo del gasto</label>
-               <input type="number" class="form-control" class="presupuesto" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
+               <input type="number" id="costoDeGasto" class="form-control" class="presupuesto" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
                <!-- Ingresar datos del gasto-->
              </div>
              <button id="btnGasto" type="button" class="btn btn-primary">
@@ -114,14 +114,12 @@
             </div> <!-- Gastos -->
           </div>   <!-- BTN REVEAL GASTOS -->
         </div>
-         <!-- Cierre div presupuesto y gasto -->
-
-        
+         <!-- Cierre div presupuesto y gasto --> 
         
       <!-- VISUALIZAR GASTOS -->
       
       <div class="container-fluid row justify-content-center col-12 col-lg-12 col-md-12 ">
-        <div class="d-flex align-items-center justify-content-center p-3 my-3 text-white col-12 col-lg-12 col-md-12 bg-purple rounded shadow-sm">
+        <div class="d-flex align-items-center justify-content-center p-3 my-3 text-white col-12 col-lg-12 col-md-12g bg-purple rounded shadow-sm">
           <h4 class="lh-3 mb-3">Gastos:</h4>
         </div>
         <div class="listaGastos " style="display: none;">
