@@ -70,4 +70,16 @@ body {
    .contenedor{justify-content: space-around;}
 
    .btn {padding: 10px;}
+
+
+   .listaGastos {
+    padding: 15px;
+    background-color: #8a5fda;
+   }
+    .gastosLi {
+    list-style: none;
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 0.5px solid #6f42c1;
+   }
    

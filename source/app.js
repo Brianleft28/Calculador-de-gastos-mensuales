@@ -37,3 +37,28 @@ presupuestoBtn.addEventListener("click", (x) => {
 });
 
 // mostrando los gastos
+// Suponiendo que btnGasto es el botón y nombreDeGasto es el campo de entrada
+const btnGasto = document.getElementById('btnGasto');
+const nombreDeGastoInput = document.getElementById('nombreDeGasto');
+
+btnGasto.addEventListener('click', (x) => {
+  // Obtener el valor del campo de entrada
+  const nombreDeGasto = nombreDeGastoInput.value;
+
+  if (nombreDeGasto === '') {
+    alert('Por favor, ingrese un nombre.');
+  } else {
+    // Crear un nuevo elemento de lista
+    const listaGastos = document.createElement('li');
+    
+    // Establecer el contenido de texto del elemento de lista
+    listaGastos.textContent = `${nombreDeGasto}`;
+
+    // Obtener el contenedor de la lista (sustituye '.listaGastos' con tu clase real)
+    const divGastos = document.querySelector('.listaGastos');
+    divGastos.style.display = 'block'
+
+    // Agregar el nuevo elemento de lista al contenedor
+    divGastos.appendChild(listaGastos);
+  }
+});

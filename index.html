@@ -81,13 +81,13 @@
           <div class="mb-3">
             <!-- INPUT GASTOS -->
             <label for="nombreDeGasto" class="mb-2">Ingrese el nombre del gasto</label>
-            <input type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
+            <input id="nombreDeGasto" type="text" class="form-control" aria-describedby="helpId" placeholder="Ingresa el nombre del gasto." />
             <hr>
             <label for="costoDeGasto" class="mb-2">Ingrese el costo del gasto</label>
             <input type="number" class="form-control" clas="" aria-describedby="helpId" placeholder="Ingresa el monto del gasto" required/>
             <!-- Ingresar datos del gasto-->
           </div>
-          <button type="button" class="btn btn-primary">
+          <button id="btnGasto" type="button" class="btn btn-primary">
             Ingresar el gasto
           </button>
         </div> <!-- Gastos -->
@@ -100,9 +100,9 @@
           <h4 class="lh-3 mb-3">Gastos:</h4>
           <hr>
         </div>
-        <div class="listaGastos">
+        <div class="listaGastos" style="display: none;">
         <ul id="gastos" style="display: none;">
-          <li>
+          <li class="gastosLi">
           </li>
         </ul>
         </div>
