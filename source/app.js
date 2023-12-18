@@ -1,6 +1,7 @@
 const presupuestoBtn = document.getElementById("btnPresupuesto");
 
 const divPrespuesto = document.getElementById('collapseExample');
+let presupuestoTotal = 0
 
 
 
@@ -20,12 +21,19 @@ presupuestoBtn.addEventListener("click", (x) => {
   
 
   if (presupuesto) {
-    const imgJsDinero = document.getElementsByClassName("img")[0];
-    if (imgJsDinero) {
+    const presupuestoInput = document.getElementById("presupuesto");
+    const nuevoPresupuesto = parseFloat(presupuestoInput.value);
 
-      let presupuesto = document.getElementById("presupuesto");
-      presupuesto = presupuesto.value;
-      let presupuestoTotal = presupuesto 
+    if (!isNaN(nuevoPresupuesto)) {
+      presupuestoTotal = nuevoPresupuesto;
+      modificarPresupuesto(presupuestoTotal)
+      const imgJsDinero = document.getElementsByClassName("img")[0];
+    if(imgJsDinero){
+      imgJsDinero.src = "./asset/img/dinero.png";
+    } else {
+      console.error("El elemento con ese className no se encontró");
+
+    }
       
       const tituloPrimerBanner = document.getElementsByTagName('h6')[0];
       const textoBannerJs = document.getElementsByTagName('small')[0];
@@ -35,10 +43,8 @@ presupuestoBtn.addEventListener("click", (x) => {
       
       modificarPresupuesto(presupuestoTotal);
 
-      imgJsDinero.src = "./asset/img/dinero.png";
     } 
     else {
-      console.error("El elemento con ese className no se encontró");
     }
     
     divPrespuesto.style.display = 'none';
@@ -73,22 +79,31 @@ const valorDeGastoInput = document.getElementById('costoDeGasto')
 btnGasto.addEventListener('click', (x) => {
   // Obtener el valor del campo de entrada
   const nombreDeGasto = nombreDeGastoInput.value;
-  const valorDeGasto = valorDeGastoInput.value;
-  let presupuestoInput = document.getElementById("presupuesto");
-  let presupuesto = presupuestoInput.value;
+  const valorDeGasto = parseFloat(valorDeGastoInput.value);
 
+  
+  if (isNaN(valorDeGasto) || valorDeGasto <= 0) {
+    alert('Por favor, ingrese un valor numérico válido para el gasto.');
+    return;
+  }
 
-  if (nombreDeGasto === '') {
-    alert('Por favor, ingrese un nombre.');
-  } else {
+     if(nombreDeGasto === '') {
+    alert('Por favor, ingrese un nombre para el gasto.');
+    return
+  } else if(valorDeGasto > presupuestoTotal) {
+    alert('El gasto no puede ser mayor que el presupuesto disponible')
+    return
+  }
 
     // Crear un nuevo elemento de lista
     const listaGastos = document.createElement('li');
     listaGastos.classList = ('gastosLi')
     
     // Establecer el contenido de texto del elemento de lista
-    listaGastos.textContent = `${nombreDeGasto}: $${valorDeGasto} || Presupuesto Actual: $${presupuesto - valorDeGasto}`;
-    modificarPresupuesto(presupuesto - valorDeGasto)
+    presupuestoTotal -= valorDeGasto;
+    modificarPresupuesto(presupuestoTotal)
+    
+    listaGastos.textContent = `${nombreDeGasto}: $${valorDeGasto} || Presupuesto Actual: $${presupuestoTotal}`;
     // modificando el presupuesto general
     // Obtener el contenedor de la lista (sustituye '.listaGastos' con tu clase real)
     const divGastos = document.querySelector('.listaGastos');
@@ -116,9 +131,8 @@ btnGasto.addEventListener('click', (x) => {
     // Actualizar presupuesto en el titulo 
     const divPresu = document.getElementById('divPresu');
 
-  }
+  })
 
-});
 
 const btnCancelarGasto = document.getElementById('btnCancelarGasto');
 
