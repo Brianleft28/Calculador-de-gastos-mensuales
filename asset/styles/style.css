@@ -88,6 +88,16 @@ body {
     margin-bottom: 15px;
    }
     
+    .btnBorrar {
+        float: right;
+        padding: 6px !important;
+        margin-right: 5px;
+    }
+    .btnEditar {
+        float: right;
+        padding: 6px !important;
+    }
+
     .gastosLi {
     list-style: none;
     color: #fff;
